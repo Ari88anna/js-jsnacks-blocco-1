@@ -1,7 +1,4 @@
 // Crea 10 oggetti che rappresentano una zucchina.
-// Dividi in due array separati le zucchine che misurano meno o più di 15cm. 
-//Infine stampa separatamente quanto pesano i due gruppi di zucchine.
-
 var varietaZucchine = [
     {
         'varieta': 'lisce',
@@ -55,27 +52,56 @@ var varietaZucchine = [
     }
 ]
 
-var arrayZucchineMenoQuindici = [];
+// Dividi in due array separati le zucchine che misurano meno o più di 15cm.
+var zucchineCorte = [];
 
-var arrayZucchinePiuQuindici = [];
-
-
+var zucchineLunghe = [];
 
 for ( var i = 0; i < varietaZucchine.length; i++ )  {
 
-    var thisZucchina = varietaZucchine[i]
+    var thisZucchina = varietaZucchine[i];
     // console.log(thisZucchina)
 
     if (thisZucchina.lunghezza <= 15 ) {
 
-        arrayZucchineMenoQuindici.push(thisZucchina);
-        
+        zucchineCorte.push(thisZucchina);       
 
-    }else if (thisZucchina.lunghezza >= 15 ) {
-        arrayZucchinePiuQuindici.push(thisZucchina)
+    }else if (thisZucchina.lunghezza > 15 ) {
+
+        zucchineLunghe.push(thisZucchina);
+        
     }    
 }
 
-console.log( 'zucchine lunghe', arrayZucchinePiuQuindici)
+console.log( 'zucchine lunghe', zucchineLunghe);
     
-console.log('zucchine corte',arrayZucchineMenoQuindici)
+console.log('zucchine corte',zucchineCorte);
+
+
+
+//Infine stampa separatamente quanto pesano i due gruppi di zucchine.
+
+var sommaZuccheCorte = 0;
+
+for ( var i = 0; i < zucchineCorte.length; i++ ) {
+
+    var thisZucchinaCorta = zucchineCorte[i];
+
+    sommaZuccheCorte += thisZucchinaCorta.peso;    
+}
+
+console.log('somma zucche corte', sommaZuccheCorte)
+
+
+
+var sommaZuccheLunghe = 0;
+
+for ( var i = 0; i < zucchineLunghe.length; i++ ) {
+
+    var thisZucchinaLunga = zucchineLunghe[i];
+
+    sommaZuccheLunghe += thisZucchinaLunga.peso;    
+}
+
+console.log('somma zucche lunghe', sommaZuccheLunghe)
+
