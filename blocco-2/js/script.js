@@ -79,29 +79,55 @@ console.log('zucchine corte',zucchineCorte);
 
 
 
-//Infine stampa separatamente quanto pesano i due gruppi di zucchine.
-
-var sommaZuccheCorte = 0;
-
-for ( var i = 0; i < zucchineCorte.length; i++ ) {
-
-    var thisZucchinaCorta = zucchineCorte[i];
-
-    sommaZuccheCorte += thisZucchinaCorta.peso;    
-}
+var sommaZuccheCorte = getTotale (zucchineCorte)
 
 console.log('somma zucche corte', sommaZuccheCorte)
 
-
-
-var sommaZuccheLunghe = 0;
-
-for ( var i = 0; i < zucchineLunghe.length; i++ ) {
-
-    var thisZucchinaLunga = zucchineLunghe[i];
-
-    sommaZuccheLunghe += thisZucchinaLunga.peso;    
-}
+var sommaZuccheLunghe = getTotale (zucchineLunghe)
 
 console.log('somma zucche lunghe', sommaZuccheLunghe)
 
+
+
+//Infine stampa separatamente quanto pesano i due gruppi di zucchine.
+
+// var sommaZuccheCorte = 0;
+
+// for ( var i = 0; i < zucchineCorte.length; i++ ) {
+
+//     var thisZucchinaCorta = zucchineCorte[i];
+
+//     sommaZuccheCorte += thisZucchinaCorta.peso;    
+// }
+
+// console.log('somma zucche corte', sommaZuccheCorte)
+
+
+
+// var sommaZuccheLunghe = 0;
+
+// for ( var i = 0; i < zucchineLunghe.length; i++ ) {
+
+//     var thisZucchinaLunga = zucchineLunghe[i];
+
+//     sommaZuccheLunghe += thisZucchinaLunga.peso;    
+// }
+
+// console.log('somma zucche lunghe', sommaZuccheLunghe)
+
+// Funzione 
+//
+//
+function getTotale (lista) {
+
+    var somma = 0;
+
+    for ( var i = 0; i < lista.length; i++ ) {
+
+    var thisElement = lista[i];
+
+    somma += thisElement.peso;
+
+    }
+    return somma;    
+}
