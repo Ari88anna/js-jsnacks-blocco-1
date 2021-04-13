@@ -66,7 +66,7 @@ for ( var i = 0; i < varietaZucchine.length; i++ )  {
 
         zucchineCorte.push(thisZucchina);       
 
-    }else if (thisZucchina.lunghezza > 15 ) {
+    } else if (thisZucchina.lunghezza > 15 ) {
 
         zucchineLunghe.push(thisZucchina);
         
@@ -78,18 +78,15 @@ console.log( 'zucchine lunghe', zucchineLunghe);
 console.log('zucchine corte',zucchineCorte);
 
 
+//Infine stampa separatamente quanto pesano i due gruppi di zucchine. 
 
-var sommaZuccheCorte = getTotale (zucchineCorte)
+var sommaZuccheCorte = getTotale (zucchineCorte);
 
-console.log('somma zucche corte', sommaZuccheCorte)
+console.log('somma zucche corte', sommaZuccheCorte);
 
-var sommaZuccheLunghe = getTotale (zucchineLunghe)
+var sommaZuccheLunghe = getTotale (zucchineLunghe);
 
-console.log('somma zucche lunghe', sommaZuccheLunghe)
-
-
-
-//Infine stampa separatamente quanto pesano i due gruppi di zucchine.
+console.log('somma zucche lunghe', sommaZuccheLunghe);
 
 // var sommaZuccheCorte = 0;
 
@@ -117,7 +114,10 @@ console.log('somma zucche lunghe', sommaZuccheLunghe)
 
 // Funzione 
 //
+//getTotale: per calcolare la somma della proprietà peso degli oggetti contenuti nell'array;
 //
+//lista -> array che di oggetti che contengono la proprietà 'peso'
+
 function getTotale (lista) {
 
     var somma = 0;
