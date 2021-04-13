@@ -66,15 +66,16 @@ for ( var i = 0; i < varietaZucchine.length; i++ )  {
     var thisZucchina = varietaZucchine[i]
     // console.log(thisZucchina)
 
-    if (thisZucchina.lunghezza < 15 ) {
+    if (thisZucchina.lunghezza <= 15 ) {
 
         arrayZucchineMenoQuindici.push(thisZucchina);
         
 
-    }else if (thisZucchina.lunghezza > 15 ) {
+    }else if (thisZucchina.lunghezza >= 15 ) {
         arrayZucchinePiuQuindici.push(thisZucchina)
-        
+    }    
 }
+
 console.log( 'zucchine lunghe', arrayZucchinePiuQuindici)
-    }
+    
 console.log('zucchine corte',arrayZucchineMenoQuindici)
